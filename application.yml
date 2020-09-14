@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: mysql://localhost:3306/root?createDatabaseIfNotExist=true
+    url: mysql://localhost:3306/rentDB?createDatabaseIfNotExist=true
     username: root
     password: minati
     driver-class-name: com.mysql.jdbc.Driver
