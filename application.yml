@@ -1,10 +1,17 @@
+server:
+  port: 8585
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/root
-    username: root
-    password: minati
     driver-class-name: com.mysql.jdbc.Driver
+    password: minati
+    url: jdbc:mysql://localhost:3306/rentDB?createDatabaseIfNotExist=true
+    username: root
   jpa:
     hibernate:
+      ddl-auto: create
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
